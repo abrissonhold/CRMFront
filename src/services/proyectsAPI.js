@@ -7,7 +7,7 @@ const getProyects = async () => {
     return result;
 }
 const ApiProyects = {
-    Get : getProyects
+    Get: getProyects
 };
 
 export default ApiProyects;
