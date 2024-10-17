@@ -1,42 +1,36 @@
-import Card from '../components/cards.js'
-import ApiProjects from '../services/projectsAPI.js';
-import ApiCampaignTypes from '../services/campaignTypesAPI.js';
-import ApiClients from '../services/clientsAPI.js';
+import { getProjectById } from '../services/projectsAPI.js'; 
 
-const loadCampaignsAndClients = async () => {
-    const campaignSelect = document.getElementById('filter-campaign');
-    const clientSelect = document.getElementById('filter-client');
+const loadProjectDetails = async () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const projectId = urlParams.get('id');
 
-    const campaigns = await ApiCampaignTypes.Get();
-    campaigns.forEach(campaign => {
-        const option = document.createElement('option');
-        option.value = campaign.id;
-        option.text = campaign.name;
-        campaignSelect.appendChild(option);
-    });
+    if (projectId) {
+        const project = await getProjectById(projectId);
+        document.getElementById('project-name').innerText = project.ProjectName;
+        document.getElementById('client-name').innerText = project.ClientName;
+        document.getElementById('campaign-type').innerText = project.CampaignType;
+        // Mostrar tareas e interacciones del proyecto
+        loadTasks(project.Tasks);
+        loadInteractions(project.Interactions);
+    }
+};
 
-    const clients = await ApiClients.Get();
-    clients.forEach(client => {
-        const option = document.createElement('option');
-        option.value = client.clientID;
-        option.text = client.name;
-        clientSelect.appendChild(option);
+const loadTasks = (tasks) => {
+    const tasksContainer = document.getElementById('tasks');
+    tasks.forEach(task => {
+        const taskElement = document.createElement('li');
+        taskElement.innerText = task.Name;
+        tasksContainer.appendChild(taskElement);
     });
 };
-window.onload = loadCampaignsAndClients();
 
-const loadProjects = async () => {
-    try {
-        let cards = document.getElementById('cards');
-        cards.innerHTML = '';
-        let projects = await ApiProjects.Get();
-        projects.forEach(proyect => {
-            cards.innerHTML += Card(project)
-        });
+const loadInteractions = (interactions) => {
+    const interactionsContainer = document.getElementById('interactions');
+    interactions.forEach(interaction => {
+        const interactionElement = document.createElement('li');
+        interactionElement.innerText = interaction.Notes;
+        interactionsContainer.appendChild(interactionElement);
+    });
+};
 
-    } catch (error) {
-        console.error('Error obteniendo proyectos:', error);
-    }
-}
-
-window.onload = loadProjects;
+window.onload = loadProjectDetails;
