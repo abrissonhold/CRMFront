@@ -23,30 +23,37 @@
             </header>
             <nav>
                 <ul>
-                    <li><a href="layout.html" class="active">Tus proyectos</a></li>
-                    <li><a href="project.html">Crear nuevo proyecto</a></li>
+                    <li><a href="layout.html">Tus proyectos</a></li>
+                    <li>
+                        <a href="project.html" class="active">Crear nuevo proyecto</a>
+                    </li>
                 </ul>
             </nav>
         </aside>
 
         <main class="main-content">
             <header>
-                <h1>Gestión de Proyectos</h1>
-                <div class="filter-section">
-                    <input type="text" id="search-projects" placeholder="Buscar proyecto por nombre..." />
-                    <select id="filter-campaign">
-                        <option value="CAMPAIGN">Filtrar por campaña</option>
-                        <!-- Carga dinámica de campañas-->
-                    </select>
-                    <select id="filter-client">
-                        <option value="">Filtrar por cliente</option>
-                        <!-- Carga dinámica de clientes -->
-                    </select>
+                <h1>Nuevo Proyecto</h1>
+                <div id="user">
+                    <p>"Tu empresa"</p>
                 </div>
             </header>
 
-            <section class = "cards" id="cards">
-                <!-- Carga dinámica de los proyectos -->
+            <section class="cards">
+                <div class="project-card">
+                    <form action="nose"></form>
+                    <h3>Primer Proyecto</h3>
+                    <p>Detalles del proyecto</p>
+                    <p>Muchos detalles del proyecto</p>
+                    <section class="int">
+                        <h3>Cosas para escribir</h3>
+                        <ul>
+                            <li>elemento 1</li>
+                            <li>elemento 2</li>
+                            <li>elemento 3</li>
+                        </ul>
+                    </section>
+                </div>
             </section>
         </main>
     </div>
@@ -54,8 +61,6 @@
     <footer class="footer">
         <p>© 2024 Gestión de Proyectos. Todos los derechos reservados.</p>
     </footer>
-
-    <script src=".\src\views\main.js" type="module"></script>
 </body>
 
 </html>

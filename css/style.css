@@ -19,7 +19,7 @@ body {
 
 * {
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat', sans-serif; 
 }
 
 .main-content {
@@ -64,6 +64,10 @@ div.container-fluid{
 .sidebar .brand {
     text-align: center;
     margin-bottom: 50px;
+}
+
+.sidebar .brand #logo{
+    width: 9rem;
 }
 
 .sidebar .brand h2 {
@@ -137,40 +141,31 @@ input[type="text"]:focus, select:focus {
 .cards {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    justify-content: space-evenly;
     margin-bottom: 30px;
     width: 100%;
 }
 
 .project-card {
     background-color: var(--text-dark);
-    padding: 20px;
     border-radius: 10px;
-    width: calc(50% - 10px);
+    width: calc(30% - 5px);
+    padding: 15px;
+    margin: 10px 0px 10px 0px;    
     text-align: center;
     color: var(--light-gray);
 }
+.project-card p{
+    margin:auto;
+}
 
-.int {
+.detalles {
     background-color: var(--light-gray);
     padding: 5px;
-    border-radius: 10px;
-    margin-bottom: 10px;
-}
-
-.int h3 {
-    margin-top: 10px;
-    color: var(--dark-blue);
-}
-
-.int ul {
-    list-style: none;
-    padding-inline-start: 5px;
-}
-
-.int ul li {
-    padding: 1px 0;
-    border-bottom: 1px solid var(--light-pink);
+    border-radius: 10px;    
+    width: calc(50% - 20px);
+    margin: 5px;
+    border: 0.5px solid var(--light-purple);
     color: var(--dark-purple);
 }
 

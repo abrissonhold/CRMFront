@@ -5,6 +5,7 @@ const getProyects = async () => {
         result = await response.json();
     }
     return result;
+
 }
 const ApiProyects = {
     Get: getProyects

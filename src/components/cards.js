@@ -4,21 +4,17 @@ export default function Card(project) {
             <h3>${project.projectName}</h3>
             <p>Tipo de campaña: ${project.campaignType.name}</p>                
             <p>Cliente: ${project.client.name}</p>
-            <section class="int">
-                <h3>Tareas</h3>
-                <ul>
-                    <!-- Aquí puedes agregar elementos dinámicamente si los tienes -->
-                </ul>
-            </section>
-            <p>Fecha de comienzo: ${project.startDate}</p>                
-            <p>Fecha de finalización: ${project.endDate}</p>
+            <button class="detalles" >Ver detalles
+            </button>
+            <p>Inicio: ${project.startDate}</p>                
+            <p>Fin: ${project.endDate}</p>
         </div>
     `;
 }
 
 
 
-/*    ${proyecto.tasks.map(tarea => `<li>${tarea.name}</li>`).join('')}
+/*    
 
 
         "projectID": "489ba87c-f98e-4569-ccd8-08dcecd17ab4",
