@@ -29,9 +29,9 @@ const loadProjects = async (filters = {}) => {
         let cards = document.getElementById('cards');
         cards.innerHTML = ''; 
         let projects = await getProjects(filters);
-        if (projects == []) {
-            return ('<h3>${project.projectName}</h3>');
-        }
+        if (projects.length == 0) {
+            cards.innerHTML = '<h3>No hay proyectos para mostrar.</h3>';
+        } 
         projects.forEach(project => {
             cards.innerHTML += Card(project);
         });
