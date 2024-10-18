@@ -13,16 +13,20 @@ export const getProjects = async (filters = {}) => {
     
     let result = [];
     if (response.ok) {
-        result = await response.json();
+        return result = await response.json();
+    } else {
+        console.error('Error fetching projects');
+        return result;
     }
-    return result;
 };
 
 
 export const getProjectById = async (id) => {
     let response = await fetch(`https://localhost:7108/api/v1/Project/${id}`);
     if (response.ok) {
-        result = await response.json();
+        return await response.json();
+    } else {
+        console.error('Error fetching project by ID');
+        return null;
     }
-    return result;
 } 

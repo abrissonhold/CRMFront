@@ -199,6 +199,45 @@ input[type="text"]:focus, select:focus {
     color: var(--dark-purple);
 }
 
+
+#detailcard{
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;    
+    margin: 10px 10px 0px 10px;
+    border: 0.5px solid var(--light-purple);
+    border-bottom: 0;
+    color: var(--light-purple);
+    text-align: center;
+    height: 100vh;
+}
+
+#detailcard p{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+
+#detailcard .project-card{
+    padding: 15px;
+    border-radius: 10px 10px 0px 0px;    
+    margin: 10px 0px 0px 0px;
+    border: 0.5px solid var(--light-purple);
+    border-bottom: 0;
+    height: 95%;
+    width: 100%;
+}
+
+.list-card{
+    padding: 15px;
+    border-radius: 15px;    
+    margin: 10px 0px 0px 0px;
+    border: 0.5px solid var(--light-purple);
+    background-color: rgba(166, 172, 228, 0.705);
+    color: var(--text-dark);
+    height: 40%;
+    width: 100%;
+}
+
 .footer {
     background-color: var(--light-purple);
     color: var(--text-dark);

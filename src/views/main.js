@@ -1,4 +1,4 @@
-import Card from '../components/cards.js';
+import { Card } from '../components/cards.js';
 import { getProjects } from '../services/projectsAPI.js';
 import ApiCampaignTypes from '../services/campaignTypesAPI.js';
 import ApiClients from '../services/clientsAPI.js';

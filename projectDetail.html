@@ -18,42 +18,35 @@
     <div class="container-fluid">
         <aside class="sidebar">
             <header class="brand">
-                <img src="images/IconoBlanco.png" alt="logo" id="logo" />
-                <h2>TaskFlow</h2>
+                <a href="layout.html" class="active">
+                    <img src="images/IconoBlanco.png" alt="logo" id="logo" />
+                    <h2>TaskFlow</h2>
+                </a>
             </header>
             <nav>
                 <ul>
                     <li><a href="layout.html">Tus proyectos</a></li>
-                    <li>
-                        <a href="project.html" class="active">Crear nuevo proyecto</a>
-                    </li>
+                    <li><a href="newProject.html">Crear nuevo proyecto</a></li>
+                    <li><a href="projectDetail.html" class="active">Tu proyecto</a></li>
                 </ul>
             </nav>
         </aside>
 
         <main class="main-content">
             <header>
-                <h1>Nuevo Proyecto</h1>
-                <div id="user">
-                    <p>"Tu empresa"</p>
+                <h1>Tu Proyecto</h1>
+                <div class="user" id="user">
+                    <!-- Carga dinámica del nombre del cliente -->
                 </div>
             </header>
 
-            <section class="cards">
-                <div class="project-card">
-                    <form action="nose"></form>
-                    <h3>Primer Proyecto</h3>
-                    <p>Detalles del proyecto</p>
-                    <p>Muchos detalles del proyecto</p>
-                    <section class="int">
-                        <h3>Cosas para escribir</h3>
-                        <ul>
-                            <li>elemento 1</li>
-                            <li>elemento 2</li>
-                            <li>elemento 3</li>
-                        </ul>
-                    </section>
+            <section id="detailcard">
+                <div>
+                    <h2 id="project-name"></h2>
+                    <p id="client-name"></p>
+                    <p id="campaign-type"></p>
                 </div>
+
             </section>
         </main>
     </div>
@@ -61,6 +54,8 @@
     <footer class="footer">
         <p>© 2024 Gestión de Proyectos. Todos los derechos reservados.</p>
     </footer>
+
 </body>
+<script src="./src/views/projectDetail.js" type="module"></script>
 
 </html>

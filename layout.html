@@ -18,13 +18,15 @@
     <div class="container-fluid">
         <aside class="sidebar">
             <header class="brand">
-                <img src="images/IconoBlanco.png" alt="logo" id="logo" />
-                <h2>TaskFlow</h2>
+                <a href="layout.html" class="active">
+                    <img src="images/IconoBlanco.png" alt="logo" id="logo" />
+                    <h2>TaskFlow</h2>
+                </a>
             </header>
             <nav>
                 <ul>
                     <li><a href="layout.html" class="active">Tus proyectos</a></li>
-                    <li><a href="project.html">Crear nuevo proyecto</a></li>
+                    <li><a href="newProject.html">Crear nuevo proyecto</a></li>
                 </ul>
             </nav>
         </aside>
@@ -46,13 +48,13 @@
                 </div>
             </header>
 
-            <section class = "cards" id="cards">
+            <section class="cards" id="cards">
                 <!-- Carga dinámica de los proyectos -->
-            </section>                
+            </section>
             <div id="pagination">
-                    <button class="nextprev" id="prevButton" onclick="prevPage()">Anterior</button>
-                    <button class="nextprev" id="nextButton" onclick="nextPage()">Siguiente</button>
-                </div>
+                <button class="nextprev" id="prevButton" onclick="prevPage()">Anterior</button>
+                <button class="nextprev" id="nextButton" onclick="nextPage()">Siguiente</button>
+            </div>
         </main>
     </div>
 
