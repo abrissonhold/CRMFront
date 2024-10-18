@@ -30,3 +30,26 @@ export const getProjectById = async (id) => {
         return null;
     }
 } 
+
+
+export const createProject = async (projectData) => {
+    try {
+        const response = await fetch('https://localhost:7108/api/v1/Project', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(projectData)
+        });
+
+        if (response.ok) {
+            return await response.json(); 
+        } else {
+            console.error('Error al crear el proyecto');
+            return null;
+        }
+    } catch (error) {
+        console.error('Error de red:', error);
+        return null;
+    }
+};

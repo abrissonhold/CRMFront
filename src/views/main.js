@@ -55,6 +55,7 @@ const applyFilters = async () => {
     };
     await loadProjects(filters);
 };
+
 window.onload = async () => {
     await loadProjects({ offset: offset, size: size });
     await loadCampaignsAndClients();

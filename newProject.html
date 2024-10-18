@@ -33,27 +33,38 @@
 
         <main class="main-content">
             <header>
-                <h1>Nuevo Proyecto</h1>
-                <div class="user">
-                    <p>"Tu empresa"</p>
-                </div>
+                <h1>Crear Nuevo Proyecto</h1>
             </header>
 
-            <section class="cards">
-                <div class="project-card">
-                    <form action="nose"></form>
-                    <h3>Primer Proyecto</h3>
-                    <p>Detalles del proyecto</p>
-                    <p>Muchos detalles del proyecto</p>
-                    <section class="int">
-                        <h3>Cosas para escribir</h3>
-                        <ul>
-                            <li>elemento 1</li>
-                            <li>elemento 2</li>
-                            <li>elemento 3</li>
-                        </ul>
-                    </section>
-                </div>
+            <section>
+                <form id="projectForm">
+                    <div class="form-group">
+                        <label for="projectName">Nombre del Proyecto</label>
+                        <input type="text" id="projectName" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="clientId">Cliente</label>
+                        <select id="clientId" required></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="campaignType">Tipo de Campaña</label>
+                        <select id="campaignType" required></select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="startDate">Fecha de Inicio</label>
+                        <input type="date" id="startDate" required />
+                    </div>
+
+                    <div class="form-group">
+                        <label for="endDate">Fecha de Fin</label>
+                        <input type="date" id="endDate" required />
+                    </div>
+
+                    <button type="submit" id = "sumbit" class = "sumbit">Crear Proyecto</button>
+                </form>
             </section>
         </main>
     </div>
@@ -61,6 +72,8 @@
     <footer class="footer">
         <p>© 2024 Gestión de Proyectos. Todos los derechos reservados.</p>
     </footer>
+
+    <script src=".\src\views\newProyect.js" type="module"></script>
 </body>
 
 </html>

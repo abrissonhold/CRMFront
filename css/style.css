@@ -180,7 +180,7 @@ input[type="text"]:focus, select:focus {
     border: 0.5px solid var(--light-purple);
 }
 
-.nextprev{
+.nextprev, .sumbit{
     background-color: var(--light-purple);
     border-radius: 10px;
     width: calc(40% - 5px);
@@ -198,7 +198,6 @@ input[type="text"]:focus, select:focus {
     border: 0.5px solid var(--light-purple);
     color: var(--dark-purple);
 }
-
 
 #detailcard{
     padding: 15px;
